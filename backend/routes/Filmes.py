@@ -10,6 +10,7 @@ load_dotenv()
 TMDB_API_TOKEN = os.getenv("API_TMDB_TOKEN")
 TMDB_BASE_URL = "https://api.themoviedb.org/3"
 
+
 # Headers para autenticar nossas requisições no TMDb
 HEADERS = {
     "accept": "application/json",

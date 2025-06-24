@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from routes.filmes import router
+from routes.Filmes import router
+from routes.Filme import router_filme
 
 
 # Inicializa a aplicação FastAPI
@@ -9,6 +10,8 @@ app = FastAPI(
 )
 
 app.include_router(router)
+app.include_router(router_filme)
+
 
 if __name__ == "__main__":
     import uvicorn
