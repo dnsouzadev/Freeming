@@ -3,6 +3,7 @@ import httpx
 import os
 from dotenv import load_dotenv
 from dto.Filme import Filme
+from dto.FilmeSearch import FilmeSearch
 
 load_dotenv()
 
@@ -79,7 +80,15 @@ async def search_movie(query: str):
                 detail=f"Erro retornado pela API do TMDb: {exc.response.text}"
             )
 
-    return response.json()
+    dados_brutos = response.json()
+    filmes_encontrados = dados_brutos.get("results", [])
+    filmes_processados = []
+    for filme_bruto in filmes_encontrados:
+        poster_path = filme_bruto.get("poster_path")
+        filme_bruto['poster_url'] = f"https://image.tmdb.org/t/p/w500{poster_path}" if poster_path else None
+        filmes_processados.append(filme_bruto)
+
+    return filmes_processados
 
 # Adiciona o roteador de filmes à aplicação FastAPI
 app.include_router(router)
