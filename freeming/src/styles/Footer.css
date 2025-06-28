@@ -1,0 +1,7 @@
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-color: #101010; /* Um pouco mais escuro que a superfície */
+  color: var(--text-color-dark);
+  font-size: 0.9rem;
+}

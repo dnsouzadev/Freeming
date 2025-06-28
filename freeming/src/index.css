@@ -1,0 +1,24 @@
+:root {
+  --primary-color: #6a0dad; /* Roxo vibrante */
+  --secondary-color: #c71585; /* Rosa/Magenta */
+  --background-color: #121212; /* Preto suave */
+  --surface-color: #1e1e1e; /* Cor de superfície (cards) */
+  --text-color: #e0e0e0; /* Cinza claro para texto */
+  --text-color-dark: #a0a0a0; /* Cinza mais escuro */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* Faz o conteúdo principal crescer e empurrar o footer para baixo */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box; /* Garante que o padding não aumente a largura */
+}
+
+.results-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-bottom: 40px;
+}
+
+/* Limita a largura do card quando ele é o único resultado */
+.results-container > .movie-card {
+    max-width: 400px;
+    width: 100%;
+}
+
+.status-message {
+  font-size: 1.2rem;
+  color: var(--text-color-dark);
+  margin-top: 20px;
+  text-align: center;
+}
+
+.status-message.error {
+  color: #ff5555;
+}
