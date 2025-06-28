@@ -1,3 +1,5 @@
+from rich.pretty import Pretty
+
 from dto.VideoEmbedResponse import VideoEmbedResponse
 from .Filme import get_movie_embed
 from .Filmes import search_movie
@@ -33,14 +35,15 @@ async def search_watch(query: str) -> dict[int, VideoEmbedResponse]:
         response = {}
         r_id = 0
         for dado in dados:
+            print(Pretty(dado))
             tmdb_id = dado['id']
             model = VideoEmbedResponse(
                 id=tmdb_id,
                 title=dado['title'] or "Título não disponível",
-                poster_url=dado.get('poster_url', None),
+                poster_url = dado.get('poster_url') or "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjNwitOkVehY1hzubk6LHbM6T4JLxZ-VXYJG1ufypJiFosTCUdOTkXVpUo2wfGc2nlY3Q&usqp=CAU",
                 description=dado.get('overview', "Descrição não disponível"),
                 release_date=dado.get('release_date', "Data de lançamento não disponível"),
-                embed_url=f"{VIDSRC_BASE_URL}{tmdb_id}"
+                embed_url=f"{VIDSRC_BASE_URL}{tmdb_id}" or "Embed URL não disponível"
             )
             response[r_id] = model
             r_id += 1
