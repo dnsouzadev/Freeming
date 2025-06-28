@@ -36,3 +36,12 @@
 .status-message.error {
   color: #ff5555;
 }
+
+.movie-grid {
+  display: grid;
+  /* MUDANÇA AQUI: de 280px para 200px */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+  width: 100%;
+}
+
