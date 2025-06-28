@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from routes.Filmes import router
 from routes.Filme import router_filme
 from routes.Watch import router_watch
@@ -7,6 +8,15 @@ from routes.Watch import router_watch
 app = FastAPI(
     title="Meu Stremio Legal API",
     description="Uma API para buscar informações de filmes de fontes legais."
+)
+
+origins = ["*"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 app.include_router(router)
