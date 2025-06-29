@@ -26,7 +26,8 @@ function App() {
 
     // Lembre-se de que no deploy final, a URL deve ser relativa, como '/api/watch/...'
     // Para desenvolvimento local, você pode usar a URL completa do seu backend.
-    const searchUrl = `http://localhost:8000/watch/search/${encodeURIComponent(query)}`;
+    // const searchUrl = `http://localhost:8000/watch/search/${encodeURIComponent(query)}`;
+    const searchUrl = `/api/watch/search/${encodeURIComponent(query)}`;
 
     try {
       const response = await fetch(searchUrl);
