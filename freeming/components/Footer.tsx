@@ -1,5 +1,5 @@
+import { Github, Heart, Linkedin, Mail } from "lucide-react"
 import Link from "next/link"
-import { Github, Linkedin, Mail, Heart } from "lucide-react"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -38,7 +38,7 @@ export default function Footer() {
               >
                 <Linkedin className="w-6 h-6" />
               </a>
-              <a href="mailto:contato@freeming.com" className="text-gray-400 hover:text-white transition-colors">
+              <a href="mailto:dnsouzadev02@gmail.com" className="text-gray-400 hover:text-white transition-colors">
                 <Mail className="w-6 h-6" />
               </a>
             </div>
