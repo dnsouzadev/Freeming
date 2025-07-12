@@ -1,8 +1,8 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Poppins } from "next/font/google"
 import Footer from "@/components/Footer"
 import Navbar from "@/components/Navbar"
+import type { Metadata } from "next"
+import { Poppins } from "next/font/google"
+import type React from "react"
 import "./globals.css"
 
 const poppins = Poppins({
@@ -15,7 +15,6 @@ export const metadata: Metadata = {
   title: "Freeming - Assista Filmes Online Grátis",
   description:
     "Plataforma gratuita para assistir filmes online. Encontre seus filmes favoritos e assista gratuitamente.",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({

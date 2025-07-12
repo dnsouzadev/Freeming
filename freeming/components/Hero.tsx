@@ -1,7 +1,7 @@
 "use client"
 
-import Link from "next/link"
 import { Play, Search } from "lucide-react"
+import Link from "next/link"
 
 export default function Hero() {
   return (

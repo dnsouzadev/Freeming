@@ -1,10 +1,10 @@
 "use client"
 
-import { useCallback, useState } from "react"
 import DetailsModal from "@/components/DetailsModal"
 import MovieCard from "@/components/MovieCard"
 import PlayerModal from "@/components/PlayerModal"
 import SearchBar from "@/components/SearchBar"
+import { useCallback, useState } from "react"
 
 interface Movie {
   id: string
@@ -75,7 +75,7 @@ export default function SearchPage() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">Buscar Filmes</h1>
-          <p className="text-gray-400 text-lg">Encontre seus filmes favoritos</p>
+          <p className="text-gray-400 text-lg">Assista seus filmes favoritos</p>
         </div>
 
         <SearchBar onSearch={handleSearch} />
